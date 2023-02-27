@@ -1,13 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+    background-color: #EEEEEE;
+    overflow-x: hidden;
+}
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+button {
+    padding: .5rem;
+}
+input {
+    padding: .5rem;
+}
+input[type="file"]{
+    margin-bottom: 1rem;
+}
+h2,p,h1,h3 {
+    margin: 0;  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.create-button {
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
 }
+.create-button:hover {
+    opacity: .9;
+}
+button {
+    cursor: pointer;
+}
+
+i {
+    color: #fff;
+    cursor: pointer;
+}
+.type {
+    color: green;
+    font-size: 2rem;
+    display: flex;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.titel {
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+/*Navigation*/
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 5rem;
+    background-color: #bebaba;  
+    width: 100vw;
+}
+/*House*/
+.house-img {
+    width: 150px;
+    height: 180px;
+    border-radius: 20px;
+    margin-right: 1rem;
+}
+.house{
+    min-width: 350px;
+    max-width: 400px;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    background-color: #F7FBFC;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+.house a {
+    color: green;
+}
+.house img {
+    margin-right: 2rem;
+}
+.house p, h3 {
+    margin-bottom: .5rem;
+}
+.house h4, h5 {
+    margin-bottom: .5rem;
+}
+/*Showcase*/
+.showcase {
+    width: 100vw;
+    display: flex;
+    padding: 2rem 5rem;
+}
+
+.category {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 5rem;
+}
+.showcase-profile {
+    width: 100vw;
+    display: flex;
+}
+
+.modal {
+    width: 400px;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DCD6F7;
+    box-shadow: 2px 2px 2px 2px;
+}
+.create-modal {
+    width: 400px;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1rem;
+}
+.showcase-modal{
+    width: 100%;
+    padding: .5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   margin-top: 2rem;
+}
+.input-group{
+    margin: .5rem;
+}
+.input-group button {
+    width: 50px;
+    height: 40px;
+    padding: .5rem;
+    border-radius: 20px;
+    margin-right: .5rem;
+    border: none;
+    font-weight: bold;
+}
+
+.input-group input{
+    padding: .5rem;
+    width: 40px;
+    border-radius: 20px;
+    margin-right: .5rem;
+}
+
+.name {
+    width: 60%;
+}
+
+/*Sidebar*/
+.sidebar {
+    width: 300px;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    color: black;
+    border-radius: 15px;
+    height: 250px;
+    background-color: #fff;
+}
+.sidebar p {
+    margin-bottom: 1rem;
+}
+.sidebar img {
+    margin-bottom: 1rem;
+}
+.sidebar h2 {
+    margin-bottom: 1rem;
+}
+.sidebar button {
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: .5rem;
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    margin: 1rem 0;
+}
+.sidebar button:hover {
+    background-color: black;
+    color: red;
+}
+.sidebar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+.sidebar a:hover {
+    font-size: 1.2rem;
+}
+
+.sidebar-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Auth*/
+
+.auth {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-inputs {
+    width: 100%;
+    height: 50px;
+}
+.auth-inputs button {
+    width: 50%;
+    height: 100%;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    width: 70%;
+}
+.auth-form input {
+  padding: .5rem;
+  margin-bottom: .5rem;
+}
+.auth-form button {
+    padding: .5rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: .5rem;
+}
+
+/*Crousal*/
+.image-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    width: 100%;
+    position: relative;
+  }
+  .single{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+  .showcase-single {
+    display: flex;
+    justify-content: center;
+  }
+  .showcase-info {
+    padding: 1rem 5rem;
+    margin-bottom: 2rem;
+  }
+  .showcase-info * {
+    margin-bottom: .5rem;
+  }
+  .image-carousel img {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .image-carousel button {
+    height: 50px;
+    width: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    background-color: transparent;
+    border: none;
+    color: black;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    position: absolute;
+    top: calc(50% - 25px);
+  }
+  
+  .image-carousel .previous {
+    left: 0px;
+    height: 100%;
+    top: 0;
+    background-color: #333;
+    opacity: .7;
+  }
+  
+  .image-carousel .next {
+    right: 0px;
+    height: 100%;
+    top: 0;
+    background-color: #333;
+    opacity: .7;
+  }
+  
+  .image-carousel button:hover {
+    background-color: #333;
+    width: 40px;
+    color: #fff;
+  }
+  
+  .image-carousel i {
+    font-size: 22px;
+    color: white;
+  }
+
+  
